@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Time Capsule</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📦 My Time Capsule</h1>
+    <p>Create a digital vault for your memories, goals, and messages</p>
+    <nav>
+      <button onclick="showSection('addSection')">Add Memory</button>
+      <button onclick="showSection('viewSection')">View Memories</button>
+      <button onclick="toggleTheme()">🌗 Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Add Memory Section -->
+    <section id="addSection" class="active">
+      <h2>Add New Memory</h2>
+      <form id="memoryForm">
+        <input type="text" id="title" placeholder="Memory Title" required />
+        <textarea id="description" placeholder="Memory Description" rows="4" required></textarea>
+        <input type="text" id="category" placeholder="Category" required />
+        <input type="date" id="unlockDate" required />
+        <button type="submit">Save Memory</button>
+      </form>
+    </section>
+
+    <!-- View Memories Section -->
+    <section id="viewSection">
+      <h2>Saved Memories</h2>
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+      </select>
+      <div id="memoryList" class="memory-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Time Capsule | Built with love</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
